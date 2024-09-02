@@ -13,12 +13,12 @@ Console.WriteLine("Enter order data:");
 Console.Write("Status: ");
 OrderStatus status = Enum.Parse<OrderStatus>(Console.ReadLine());
 Console.Write("How many items to this order? ");
-int quantidade = int.Parse(Console.ReadLine());
+int quantity = int.Parse(Console.ReadLine());
 
 Client client = new Client(name, email, birthDate);
 Order order = new Order(DateTime.Now, status, client);
 
-for (int i = 1; i <= quantidade; i++)
+for (int i = 1; i <= quantity; i++)
 {
     Console.WriteLine($"Enter #{i} item date:");
     Console.Write("Product name: ");
